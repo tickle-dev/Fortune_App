@@ -1,0 +1,51 @@
+{% load static %}<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href='{% static "assets/css/bootstrap.min.css" %}' rel="stylesheet">
+    <link href='{% static "assets/css/cover.css" %}' rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet"> 
+    <title>Get Your fortune</title>
+  </head>
+
+  <body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+              <h3 class="masthead-brand" style = "font-family:'Fredericka the Great', cursive;">Fortune App</h3>
+              <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="" style = "font-family:'Fredericka the Great', cursive;" >Daily Future</a>
+                <a class="nav-link" href="horoscope" style = "font-family:'Fredericka the Great', cursive;">Horoscope</a>
+              </nav>
+            </div>
+          </header>
+        <main role="main" class="inner cover">
+            <div class="card " style=" background-color: transparent;">
+                <h1 class="card-header" style="font-family: 'Special Elite', cursive; border: hidden;">Your Fortune Today</h1>
+                <div class="card-body">
+                    <h3 class="card-text" style="font-family: 'Special Elite', cursive;">{{fortune}}</h3>
+                </div>
+            </div>
+        </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p class="lead">Web App for fortune telling!</p>
+        </div>
+      </footer>
+    </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

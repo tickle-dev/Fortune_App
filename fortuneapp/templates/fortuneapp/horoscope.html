@@ -1,0 +1,85 @@
+{% load sass_tags %}{% load static %}<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href='{% sass_src "assets/css/horoscope.scss" %}' rel="stylesheet">
+    <link href='{% static "assets/css/bootstrap.min.css" %}' rel="stylesheet">
+    <link href='{% static "assets/css/cover.css" %}' rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" re;="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <title>Get Your fortune</title>
+  </head>
+  <body class="text-center" style="background-color: #333;">
+      <div class="container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+          <div class="inner">
+            <h3 class="masthead-brand" style = "font-family:'Fredericka the Great', cursive; color: white;">Fortune App</h3>
+            <nav class="nav nav-masthead justify-content-center">
+              <a class="nav-link" href="/" style = "font-family:'Fredericka the Great', cursive;" >Daily Future</a>
+              <a class="nav-link active" href=" " style = "font-family:'Fredericka the Great', cursive;">Horoscope</a>
+            </nav>
+          </div>
+        </header>
+        <div class="row">
+       <div class="col-md-4"><div class="card text-white card-has-bg click-col" style="background-image:url('/static/assets/images/horoscope2.jpg');">
+               <img class="card-img d-none" src='{% static "assets/images/horoscope2.jpg" %}' alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+              <div class="card-img-overlay d-flex flex-column">
+                <div class="card-header" style="border: hidden; height: 5rem;">
+                  <small class="card-meta mb-2">Today's Mood</small>
+                </div>
+               <div class="card-body">
+                  <h4 class="card-text "><a class="text-white" herf="#" style="font-family: 'Zen Kurenaido', sans-serif;">{{mood}}</a></h4>
+                </div>
+                <div class="card-footer">
+                  <small><i class="far fa-clock"></i> {{today_date}}</small>
+                </div>               
+              </div>
+            </div></div>
+           <div class="col-md-4"><div class="card text-white card-has-bg click-col" style="background-image:url('/static/assets/images/horoscope2.jpg');">
+               <img class="card-img d-none" src='{% static "assets/images/horoscope2.jpg" %}' alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+              <div class="card-img-overlay d-flex flex-column">
+                <div class="card-header" style="border: hidden; height: 5rem;">
+                  <small class="card-meta mb-2">Today's Horoscope</small>
+                </div>
+               <div class="card-body">
+                  <h4 class="card-title mt-0 "><a class="text-white" herf="#" style="font-family: 'Zen Kurenaido', sans-serif;">{{description}}</a></h4>
+                </div>
+                <div class="card-footer">
+                  <small><i class="far fa-clock"></i> {{today_date}}</small>
+                </div>                
+              </div>
+            </div></div>
+        <div class="col-md-4"><div class="card text-white card-has-bg click-col" style="background-image: url('/static/assets/images/horoscope2.jpg');">
+               <img class="card-img d-none" src='{% static "assets/images/horoscope2.jpg" %}' alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+              <div class="card-img-overlay d-flex flex-column">
+                <div class="card-header" style="border: hidden; height: 5rem;">
+                  <small class="card-meta mb-2">Today's Luck Number</small>
+                </div>
+               <div class="card-body">
+                  <h4 class="card-title mt-0 "><a class="text-white" herf="#" style="font-family: 'Zen Kurenaido', sans-serif;">{{lucky_number}}</a></h4>
+                </div>
+              <div class="card-footer">
+                <small><i class="far fa-clock"></i> {{today_date}}</small>
+              </div>
+              </div>
+            </div></div>
+        
+      </div>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p class="lead">Web App for fortune telling!</p>
+        </div>
+      </footer>
+      </div>
+      
+  </body>
+</html>
